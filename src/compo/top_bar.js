@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import logo from '../assets/logo.png';
 import rulerPizza from '../assets/ruler-pizza.png';
 import fewPizza from '../assets/few_pizza.png';
+import delivery from '../assets/delivery.png';
 import BarElement from './top_bar_element'
 class TopBar extends Component
 {
@@ -18,7 +19,7 @@ class TopBar extends Component
                     {name : 'סוג',img:fewPizza},
                     {name : 'תוספות'},
                     {name : 'שתיה'},
-                    {name : 'שלם'}
+                    {name : 'שלם',img:delivery}
                     ]
             }
         return (
