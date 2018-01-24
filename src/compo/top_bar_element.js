@@ -1,4 +1,5 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
+import '../styles/top-bar-element.css';
 
 let li_style ={
     listStyle:'none',
@@ -13,9 +14,15 @@ class BarElement extends Component
     render(props)
     {
         return(
-            <li style={li_style}> 
-                {this.props.name}
-                      <img style={img_style} src={this.props.img}/>
+            <li  key={this.props.keyName} className={this.props.classFunc}> 
+                      <img style={img_style} src={this.props.img} />
+                        <p>{this.props.name}</p>
+                       {console.log(this.props.currentStep)}
+                       {console.log(this.props.keyName)}
+                       {this.props.currentStep==this.props.keyName-1?
+                        <span className="nextStep" onClick={()=>this.props.changeFunc(this.props.keyName)}>שלב הבא</span>
+                        :''
+                       }
                 </li>
 
         )
