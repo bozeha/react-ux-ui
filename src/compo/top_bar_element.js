@@ -20,7 +20,7 @@ class BarElement extends Component
                        {console.log(this.props.currentStep)}
                        {console.log(this.props.keyName)}
                        {this.props.currentStep==this.props.keyName-1?
-                        <span className="nextStep" onClick={()=>this.props.changeFunc(this.props.keyName)}>שלב הבא</span>
+                        <span className="nextStep" onClick={()=>this.props.changeFunc(this.props.keyName)}>המשך</span>
                         :''
                        }
                 </li>

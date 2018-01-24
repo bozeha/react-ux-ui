@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import TopBar from './compo/top_bar'
-
+import TopBar from './compo/top_bar';
+import TwoSec from './compo/2sec';
 
 
 class App extends Component {
@@ -9,6 +9,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
+        <TwoSec/>
           <TopBar/> 
         </header>
         <p className="App-intro">

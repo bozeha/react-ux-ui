@@ -56,7 +56,7 @@ class TopBar extends Component
     
             <div>   
             
-                <img style={style} src={logo}/>
+                <img className='logo' style={style} src={logo}/>
                     <ul className='top_ul'>
                     
                         

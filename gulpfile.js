@@ -1,5 +1,4 @@
 gulp.task('less', function() {
-    
        gulp.src('src/style/*.less')
            .pipe(less())
            .pipe(gulp.dest(function(f) {
