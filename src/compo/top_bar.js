@@ -9,7 +9,16 @@ import BarElement from './top_bar_element';
 
 class TopBar extends Component
 {
-    state = {
+    componentDidMount(){
+        console.log('componentDidMount');
+    }
+    componentWillMount(){
+        console.log('componentWillMount')
+    }
+    constructor (props) {
+        console.log('constracutor');
+        super()
+        this.state={
         eName:[
             {key:0,name : 'גודל',img:rulerPizza,CurrentClass:'fix'},
             {key:1,name : 'סוג',img:fewPizza,CurrentClass:'blur'},
@@ -18,6 +27,18 @@ class TopBar extends Component
             {key:4,name : 'שלם',img:delivery,CurrentClass:'blur'}
             ],
             currentStep:"0"
+        }
+
+    }
+    state = {
+       /*  eName:[
+            {key:0,name : 'גודל',img:rulerPizza,CurrentClass:'fix'},
+            {key:1,name : 'סוג',img:fewPizza,CurrentClass:'blur'},
+            {key:2,name : 'תוספות',img:extras,CurrentClass:'blur'},
+            {key:3,name : 'שתיה',img:drink,CurrentClass:'blur'},
+            {key:4,name : 'שלם',img:delivery,CurrentClass:'blur'}
+            ],
+            currentStep:"0" */
     }
 
     ChageStep = (currentStep)=>
@@ -40,12 +61,12 @@ class TopBar extends Component
         this.setState({eName:tempEname});
         this.setState({currentStep:currentStep});
 
-        console.log(this.state);
+        //console.log(this.state);
         //debugger;
     }
     render()
     {
-        
+        {console.log('render')}
              let style={
                  width:'50px',
                  height:'50px',
@@ -62,7 +83,7 @@ class TopBar extends Component
                         
                         {this.state.eName.map((e)=>(
                             <span><BarElement currentStep={this.state.currentStep} keyName={e.key} changeFunc={this.ChageStep} name={e.name} classFunc={e.CurrentClass} img={e.img}/></span>) )}
-                      {console.log('s')}
+                     
                         {/* <BarElement name={'ss'}/> */}
                     </ul>
             </div>

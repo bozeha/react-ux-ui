@@ -17,8 +17,7 @@ class BarElement extends Component
             <li  key={this.props.keyName} className={this.props.classFunc}> 
                       <img style={img_style} src={this.props.img} />
                         <p>{this.props.name}</p>
-                       {console.log(this.props.currentStep)}
-                       {console.log(this.props.keyName)}
+                      
                        {this.props.currentStep==this.props.keyName-1?
                         <span className="nextStep" onClick={()=>this.props.changeFunc(this.props.keyName)}>המשך</span>
                         :''
