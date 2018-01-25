@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import './App.css';
+import './styles/App.css';
 import TopBar from './compo/top_bar';
 import TwoSec from './compo/2sec';
+import FullB from './compo/steps/body'
 
 class App extends Component {
   constructor (props) {
     super(props);
   }
   state = {
-    sleep:true
+    sleep:true,
+    
   }
   
   componentWillMount(){
@@ -37,11 +39,11 @@ class App extends Component {
         {this.state.sleep?
         <TwoSec/>:''
         }
-          <TopBar/> 
+          <TopBar appAll={this}/> 
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <container>
+          <FullB/>
+        </container>
       </div>
     );
   }

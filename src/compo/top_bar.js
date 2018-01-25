@@ -31,24 +31,14 @@ class TopBar extends Component
 
     }
     state = {
-       /*  eName:[
-            {key:0,name : 'גודל',img:rulerPizza,CurrentClass:'fix'},
-            {key:1,name : 'סוג',img:fewPizza,CurrentClass:'blur'},
-            {key:2,name : 'תוספות',img:extras,CurrentClass:'blur'},
-            {key:3,name : 'שתיה',img:drink,CurrentClass:'blur'},
-            {key:4,name : 'שלם',img:delivery,CurrentClass:'blur'}
-            ],
-            currentStep:"0" */
+      
     }
 
     ChageStep = (currentStep)=>
     {
-        
-
         const tempEname =[
             ...this.state.eName
         ]
-
         /* const tempEname = Object.assign({},this.state.eName); */
         debugger;
 
@@ -78,13 +68,9 @@ class TopBar extends Component
             <div>   
             
                 <img className='logo' style={style} src={logo}/>
-                    <ul className='top_ul'>
-                    
-                        
+                    <ul className='top_ul'>    
                         {this.state.eName.map((e)=>(
                             <span><BarElement currentStep={this.state.currentStep} keyName={e.key} changeFunc={this.ChageStep} name={e.name} classFunc={e.CurrentClass} img={e.img}/></span>) )}
-                     
-                        {/* <BarElement name={'ss'}/> */}
                     </ul>
             </div>
         )

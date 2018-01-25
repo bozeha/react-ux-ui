@@ -1,6 +1,7 @@
 .top_ul {
   margin: 0 auto;
   width: 700px;
+  padding: 0px;
 }
 .top_ul span {
   width: 20%;
@@ -13,7 +14,8 @@
 }
 .top_ul span li {
   list-style: none;
-  float: right;
+  float: none;
+  margin: 0 auto;
 }
 .top_ul span li.blur img {
   filter: blur(5px);
