@@ -10,6 +10,8 @@ class App extends Component {
   }
   state = {
     sleep:true,
+    currentStep:1,
+    buttonStep:1
     
   }
   
@@ -35,15 +37,14 @@ class App extends Component {
       <div className="App">
       
         <header className="App-header">
-        {/* <button onClick={this.sleepFunc}>xxxxxxxxxxxxx</button> */}
         {this.state.sleep?
         <TwoSec/>:''
         }
           <TopBar appAll={this}/> 
         </header>
-        <container>
-          <FullB/>
-        </container>
+        <div className="contanier">
+          <FullB fullApp={this}/>
+        </div>
       </div>
     );
   }

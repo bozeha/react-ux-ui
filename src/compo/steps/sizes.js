@@ -1,5 +1,13 @@
 import React, {Component} from 'react'
 import pizza from '../../assets/pizza.png'
+import backgroundPizza from '../../assets/arrow-back.png'
+
+const addClassSelect = (event)=>
+{
+console.log(event.target );
+console.log(this.show)
+}
+
 
 class Sizes extends Component
 {
@@ -22,8 +30,8 @@ class Sizes extends Component
         return(
             <div className="sizes">
                 
-                    {this.state.sizeElements.map(e=>(
-                    <div className="sizeElment">
+                    {this.state.sizeElements.map((e,index)=>(
+                    <div onClick={(e)=>addClassSelect(this.toggle.bind(this))} key={index} className="sizeElment">
                       <h2>{e.name}</h2>
                          <img src={e.src}/>
                      </div>
