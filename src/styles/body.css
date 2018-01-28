@@ -1,0 +1,39 @@
+.mainElementsContainer {
+  width: 100%;
+  margin-top: 120px;
+}
+.mainElementsContainer .sizes {
+  display: block;
+  width: 50%;
+  min-height: 200px;
+  /* width:750px; */
+  margin: 0 auto;
+}
+.mainElementsContainer .sizes .sizeElment {
+  background-position-y: 30px;
+  overflow: visible;
+  padding-bottom: 142px;
+  background-position-y: 0px;
+  width: 33%;
+  float: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 100;
+}
+.mainElementsContainer .sizes .sizeElment.selected {
+  background-image: url(/static/media/arrow-back.91669da6.png);
+  background-position-y: 30px;
+  overflow: visible;
+  padding-bottom: 142px;
+  background-position-y: 0px;
+}
+.mainElementsContainer .sizes .sizeElment:nth-of-type(2) img {
+  width: 200px;
+}
+.mainElementsContainer .sizes .sizeElment:nth-of-type(1) img {
+  width: 150px;
+}
+.mainElementsContainer .sizes .sizeElment:nth-of-type(3) img {
+  width: 100px;
+}
