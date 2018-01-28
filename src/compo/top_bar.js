@@ -9,6 +9,7 @@ import BarElement from './top_bar_element';
 
 class TopBar extends Component
 {
+   
     componentDidMount(){
         console.log('componentDidMount');
     }
@@ -30,33 +31,37 @@ class TopBar extends Component
         }
 
     }
-    state = {
-      
-    }
+  
 
-    ChageStep = (currentStep)=>
+    ChageStep = ()=>
     {
-        const tempEname =[
-            ...this.state.eName
-        ]
-        /* const tempEname = Object.assign({},this.state.eName); */
-        debugger;
-
-        tempEname.map(e=>
+        if (this.props.appAll.state.currentStep<this.props.appAll.state.buttonStep)
         {
+            console.log('changestep');
+            const tempEname =[
+                ...this.state.eName
+            ]
             
-            e.key<=currentStep?e.CurrentClass='fix':e.CurrentClass='blur';
-        }
-        )
-        this.setState({eName:tempEname});
-        this.setState({currentStep:currentStep});
+            ////////////////////////////////////////dddddddddddddddddddddddddddddddddddddddddddd
+            debugger;
 
-        //console.log(this.state);
-        //debugger;
+            tempEname.map(e=>
+            {
+                
+                e.key<=this.props.appAll.state.currentStep?e.CurrentClass='fix':e.CurrentClass='blur';
+            }
+            )
+
+            this.setState({eName:tempEname});
+            this.props.appAll.setState({currentStep:this.props.appAll.state.currentStep+1})
+        }
     }
-    render()
+    render(props)
     {
+
         {console.log('render')}
+        {this.ChageStep()}
+        /* {console.log(this.props.appAll.state.currentStep)} */
              let style={
                  width:'50px',
                  height:'50px',
@@ -66,11 +71,11 @@ class TopBar extends Component
         return (
     
             <div>   
-            
+                {/* <div onClick={()=>this.props.appAll.setState({currentStep:1})}>{this.props.appAll.state.currentStep}ggggggggggggggg</div> */}
                 <img className='logo' style={style} src={logo}/>
                     <ul className='top_ul'>    
-                        {this.state.eName.map((e)=>(
-                            <span><BarElement currentStep={this.state.currentStep} keyName={e.key} changeFunc={this.ChageStep} name={e.name} classFunc={e.CurrentClass} img={e.img}/></span>) )}
+                        {this.state.eName.map((e,index)=>(
+                            <span key={index}><BarElement ff={this.props.appAll} currentStep={this.state.currentStep} key={e.key.props} keyName={e.key} changeFunc={this.ChageStep} name={e.name} classFunc={e.CurrentClass} img={e.img}/></span>) )}
                     </ul>
             </div>
         )
