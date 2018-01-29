@@ -37,3 +37,26 @@
 .mainElementsContainer .sizes .sizeElment:nth-of-type(3) img {
   width: 100px;
 }
+.mainElementsContainer .mainTypeDiv {
+  max-width: 60%;
+  margin: 0 auto;
+}
+.mainElementsContainer .mainTypeDiv .pizzaType {
+  width: 30%;
+  float: left;
+}
+.mainElementsContainer .mainTypeDiv .pizzaType.selected {
+  background-image: url('../assets/circle.png');
+  background-repeat: no-repat;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.mainElementsContainer .mainTypeDiv .pizzaType img {
+  width: 200px;
+}
+.mainElementsContainer .mainTypeDiv .pizzaType span {
+  display: block;
+  font-size: 25px;
+  font-weight: bold;
+}

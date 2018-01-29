@@ -43,7 +43,7 @@ class TopBar extends Component
             ]
             
             ////////////////////////////////////////dddddddddddddddddddddddddddddddddddddddddddd
-            debugger;
+            
 
             tempEname.map(e=>
             {

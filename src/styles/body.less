@@ -60,4 +60,33 @@ margin-top: 120px;
 
     }
 }
+
+.mainTypeDiv
+{
+    max-width: 60%;
+    margin: 0 auto;
+    .pizzaType
+    {
+        width:30%;
+        float:left;
+        &.selected
+        {
+            background-image:url('../assets/circle.png');
+            background-repeat:no-repat;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+        img{
+            width:200px;
+
+        }
+        span{
+            display:block;
+            font-size:25px;
+            font-weight:bold;
+        }
+    }
+}
+
 }

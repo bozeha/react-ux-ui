@@ -15,7 +15,9 @@ let CurrentStyle={
     width: '200px',
     fontSize:'20px',
     color:'red',
-    paddingTop:'50px'
+    paddingTop:'50px',
+    width:'100%',
+    display:'inline-block'
 }
 
 class NextButton extends Component
