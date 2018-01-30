@@ -31,7 +31,7 @@ class Extras extends Component
             <div className='extras'>
         
                     {this.state.extras.map((e,index)=>(
-                        <div className={'oneExtra '+e.class} key={e.id}>
+                        <div onClick={this.selectExtra(index)} className={'oneExtra '+e.class} key={e.id}>
                              <p>{e.name}</p>
                              <img src={e.src}/>
                         </div>
