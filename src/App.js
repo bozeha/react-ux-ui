@@ -27,11 +27,8 @@ class App extends Component {
   }
   render() {
     
+    {console.log('main app render')}
     
-    
-    /*   const sleep =()=>{
-      setTimeout(()=>this.setState)
-    } */
     
     return (
       <div className="App">

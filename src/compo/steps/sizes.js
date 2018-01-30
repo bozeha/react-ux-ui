@@ -15,6 +15,11 @@ const updateClasses =(x)=>
 
 class Sizes extends Component
 {
+
+
+    componentWillMount(){
+        console.log('componentWillMountSizes');
+    }
     constructor (props) {
         super(props);
         this.state = {

@@ -60,3 +60,14 @@
   font-size: 25px;
   font-weight: bold;
 }
+.mainElementsContainer .extras {
+  width: 700px;
+  margin: 0 auto;
+}
+.mainElementsContainer .extras .oneExtra {
+  width: 33.333%;
+  float: left;
+}
+.mainElementsContainer .extras .oneExtra img {
+  width: 100px;
+}
