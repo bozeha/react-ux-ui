@@ -42,7 +42,7 @@
   margin: 0 auto;
 }
 .mainElementsContainer .mainTypeDiv .pizzaType {
-  width: 30%;
+  width: 33%;
   float: left;
 }
 .mainElementsContainer .mainTypeDiv .pizzaType.selected {
@@ -65,9 +65,47 @@
   margin: 0 auto;
 }
 .mainElementsContainer .extras .oneExtra {
-  width: 33.333%;
+  width: 33%;
   float: left;
+}
+.mainElementsContainer .extras .oneExtra.selected {
+  background-image: url('../assets/circle.png');
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .mainElementsContainer .extras .oneExtra img {
   width: 100px;
+}
+.mainElementsContainer .extras .oneExtra p {
+  font-size: 35px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+.mainElementsContainer .drinks {
+  width: 700px;
+  margin: 0 auto;
+}
+.mainElementsContainer .drinks .drinkBox {
+  width: 33%;
+  float: left;
+  position: relative;
+}
+.mainElementsContainer .drinks .drinkBox.selected:before {
+  background-image: url('../assets/arrowdirect.png');
+  content: '';
+  background-size: 70px 140px;
+  width: 70px;
+  height: 140px;
+  position: absolute;
+  background-repeat: no-repeat;
+  top: 178px;
+  top: -100px;
+  left: 0px;
+}
+.mainElementsContainer .drinks .drinkBox img {
+  width: auto;
+  height: 226px;
+}
+.mainElementsContainer .drinks .drinkBox span {
+  display: block;
 }

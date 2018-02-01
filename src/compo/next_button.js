@@ -32,11 +32,11 @@ class NextButton extends Component
 
             <div style={CurrentStyle}>   
                <p onClick={()=>{
-                   this.props.fullAppNext.sleepFunc();
+                   //this.props.fullAppNext.sleepFunc();
                    this.props.fullAppNext.setState({currentStep:this.state.buttonCurrentStep,buttonStep:this.state.buttonCurrentStep+1});
                    this.setState({buttonCurrentStep:this.state.buttonCurrentStep+1});
                    
-                   }}> Next </p>
+                   }}>{this.state.buttonCurrentStep==4?<span>המשך לתשלום </span>:<span>המשך </span>}</p>
                 {console.log(this.props.fullAppNext.state.currentStep)}
                 {console.log(this.props.fullAppNext.state.buttonStep)}
                 {/* {console.log(this.state.buttonCurrentStep)}

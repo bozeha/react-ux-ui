@@ -67,7 +67,7 @@ margin-top: 120px;
     margin: 0 auto;
     .pizzaType
     {
-        width:30%;
+        width:33%;
         float:left;
         &.selected
         {
@@ -93,13 +93,53 @@ margin-top: 120px;
     width:700px;
     margin:0 auto;
     .oneExtra{
-        width:33.333%;
+        width:33%;
         float:left;
+        &.selected{
+            background-image:url('../assets/circle.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
         img{
 
             width:100px;
         }
+        p
+        {
+            font-size: 35px;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+        }
 
+    }
+}
+
+.drinks{
+    width:700px;
+    margin:0 auto;
+    .drinkBox{
+        
+        width:33%;
+        float:left;
+        position:relative;
+        &.selected:before{
+            background-image:url('../assets/arrowdirect.png');
+            content: '';
+            background-size: 70px 140px;
+            width: 70px;
+            height: 140px;
+            position: absolute;
+            background-repeat: no-repeat;
+            top: 178px;
+            top: -100px;
+            left: 0px;
+        }
+        img{
+            width:auto;
+            height:226px;
+        }
+        span
+        {display:block}
     }
 }
 

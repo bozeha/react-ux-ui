@@ -4,10 +4,13 @@ import '../../styles/body.css';
 import NextButton from '../next_button';
 import TypeOfPizza from './type';
 import Extras from './extras';
+import Drinks from './drinks'
 
 
 class FullB extends Component
 {
+
+
 
 constructor (props) {
     super();
@@ -23,7 +26,8 @@ constructor (props) {
         
         return (
             <div className='mainElementsContainer'>
-            {this.props.fullApp.state.currentStep==1?<Sizes sendToSizes={this}/>:this.props.fullApp.state.currentStep==2?<TypeOfPizza/>:this.props.fullApp.state.currentStep==3?<Extras/>:'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'}
+            {this.props.fullApp.state.currentStep==1?<Sizes sendToSizes={this}/>:this.props.fullApp.state.currentStep==2?<TypeOfPizza/>:
+            this.props.fullApp.state.currentStep==3?<Extras/>:this.props.fullApp.state.currentStep==4?<Drinks/>:'ssffsfsf'}
             {console.log('position:'+this.props.fullApp.state.currentStep)}
             <NextButton fullAppNext={this.props.fullApp}/>
             </div>

@@ -10,33 +10,55 @@ import tomato from  '../../assets/extras/tomato.png';
 class Extras extends Component
 {
 
+
     constructor (props){
         super(props)
         this.state = {
             extras:[
-                {id:0,name:'paparony',src:basal,class:''},
-                {id:1,name:'paparony',src:gamba,class:''},
-                {id:2,name:'paparony',src:mushroom,class:''},
-                {id:3,name:'paparony',src:paparoni,class:''},
-                {id:4,name:'paparony',src:srimps,class:''},
-                {id:5,name:'paparony',src:tomato,class:''}
+                {id:0,name:'בצל',src:basal,class:'',active:false},
+                {id:1,name:'גמבה',src:gamba,class:'',active:false},
+                {id:2,name:'פיטריות',src:mushroom,class:'',active:false},
+                {id:3,name:'פפרוני',src:paparoni,class:'',active:false},
+                {id:4,name:'שרימפס',src:srimps,class:'',active:false},
+                {id:5,name:'עגבניות',src:tomato,class:'',active:false}
             ]
         }
 
     }
-    render()
+    render(props)
     {
+
+        const ex= ()=>
+        {
+                alert('x');
+        }
+        const selectExtra =(currentIndex)=>
+        {
+            const tempExtras  = 
+            [
+                ...this.state.extras
+            ]
+
+            tempExtras.map(e=>{
+                currentIndex==e.id&&e.active==true?e.class='':currentIndex==e.id&&e.active==false?e.class='selected':'';
+                currentIndex==e.id&&e.active==true?e.active=false:currentIndex==e.id&&e.active==false?e.active=true:'';
+            })
+
+            this.setState({
+                    extras:tempExtras
+            })
+            
+            
+        }
         return(
 
             <div className='extras'>
         
-                    {this.state.extras.map((e,index)=>(
-                        <div onClick={this.selectExtra(index)} className={'oneExtra '+e.class} key={e.id}>
+                    {this.state.extras.map((e,index)=>(<div onClick={()=>selectExtra(index)} className={'oneExtra '+e.class} key={e.id}>
                              <p>{e.name}</p>
                              <img src={e.src}/>
-                        </div>
-
-                    ))}
+                        </div>))
+                    }
             </div>
 
         )
