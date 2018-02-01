@@ -3,6 +3,7 @@ import React , {Component} from 'react';
 let CurrentStyle={
     /* width:'100%',
     display: 'block',
+    display: 'block',
     position: 'absolute',
     bottom: '0px',
     left: '50%',
