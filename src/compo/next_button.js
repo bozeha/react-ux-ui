@@ -31,7 +31,7 @@ class NextButton extends Component
         return(
 
             <div style={CurrentStyle}>   
-               <p onClick={()=>{
+               <p className='NextButton' onClick={()=>{
                    //this.props.fullAppNext.sleepFunc();
                    this.props.fullAppNext.setState({currentStep:this.state.buttonCurrentStep,buttonStep:this.state.buttonCurrentStep+1});
                    this.setState({buttonCurrentStep:this.state.buttonCurrentStep+1});
