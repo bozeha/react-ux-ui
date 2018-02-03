@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React ,{Component} from 'react';
 import pizza from '../../assets/pizza.png'
 import backgroundPizza from '../../assets/arrow-back.png'
 
@@ -48,7 +48,8 @@ class Sizes extends Component
                 e.key==place?e.class='selected':e.class='';   
             })
             this.setState({sizeElements:tempSizes});
-            this.props.sendToSizes.setState({saveData:{sizes:place}});
+            //this.props.sendToSizes.setState({sizes:place});
+            this.props.sendToSizes.state.saveData.sizes=place;
             console.log(this.props.sendToSizes.state);
         }
         return(

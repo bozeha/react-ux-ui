@@ -11,6 +11,24 @@ class Extras extends Component
 {
 
 
+    componentWillMount(props)
+    {
+        const tempPizzaExtras=[
+            ...this.state.extras
+        ]
+
+        tempPizzaExtras.map((e,index)=>
+        {
+         e.active= this.props.sendToExtras.state.extras[index].active;
+         this.props.sendToExtras.state.extras[index].active==true?e.class='selected':e.class='';   
+        }
+        )
+        this.setState({
+            extras:tempPizzaExtras
+        })
+    }
+
+
     constructor (props){
         super(props)
         this.state = {
@@ -37,16 +55,28 @@ class Extras extends Component
             const tempExtras  = 
             [
                 ...this.state.extras
-            ]
+            ];
+            const tempArray =[
+                ...this.props.sendToExtras.state.extras
+            ];
+            tempExtras.map((e,index)=>{
+                currentIndex==e.id&&e.active==true?e.class='':currentIndex==e.id&&e.active==false?e.class='selected':''
 
-            tempExtras.map(e=>{
-                currentIndex==e.id&&e.active==true?e.class='':currentIndex==e.id&&e.active==false?e.class='selected':'';
+                currentIndex==e.id&&e.active==true?tempArray[index].active=false:'';
+                currentIndex==e.id&&e.active==false?tempArray[index].active=true:'';
+
+                //console.log('55'+this.props.sendToExtras.state.saveData.extras[currentIndex].active);
                 currentIndex==e.id&&e.active==true?e.active=false:currentIndex==e.id&&e.active==false?e.active=true:'';
-            })
-
+                //currentIndex==e.id&&e.active==false?this.props.sendToExtras.state.saveData.extras[currentIndex].active='xxxxx':'';
+        })
+            
             this.setState({
                     extras:tempExtras
             })
+            this.props.sendToExtras.setState({
+                    extras:tempArray
+            })
+            
             
             
         }

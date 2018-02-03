@@ -8,12 +8,26 @@ import fanta from  '../../assets/fanta.png';
 
 class Drinks extends Component{
 
+    componentWillMount (props) {
+
+        const firstDrinkList = [
+            ...this.state.drinkList
+        ]
+
+        firstDrinkList.map(e=>{
+
+            e.id==this.props.sendToDrink.state.saveData.drink?e.drinkClass='selected':e.drinkClass=''
+
+        }
+        )
+    }
+
     constructor(props){
         super(props);
         this.state = {
             drinkList:[
                 {id:0,name:'ספריט',drinkClass:'',src:sprite},
-                {id:1,name:'קוקה קולה',drinkClass:'selected',src:cola},
+                {id:1,name:'קוקה קולה',drinkClass:'',src:cola},
                 {id:2,name:'פאנטה',drinkClass:'',src:fanta}
             ]
         }
@@ -37,6 +51,7 @@ class Drinks extends Component{
             this.setState({
                 drinkList:tempDrinkList
             })
+            this.props.sendToDrink.state.saveData.drink= CurrentIndex;
         }
         return (
 
