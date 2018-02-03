@@ -6,8 +6,16 @@ import TypeOfPizza from './type';
 import Extras from './extras';
 import Drinks from './drinks';
 import Payment from './payment';
+import ad from '../../assets/ad.png';
+
+const addS ={
+    width: '200px',
+    position: 'absolute',
+    top:'160px',
+    right:'0px'
 
 
+}
 class FullB extends Component
 {
 
@@ -42,6 +50,7 @@ constructor (props) {
             this.props.fullApp.state.currentStep==3?<Extras sendToExtras={this}/>:this.props.fullApp.state.currentStep==4?<Drinks sendToDrink={this}/>:this.props.fullApp.state.currentStep==5?<Payment/>:''}
             {console.log('position:'+this.props.fullApp.state.currentStep)}
             <NextButton fullAppNext={this.props.fullApp}/>
+            <img style={addS} src={ad}/>
             </div>
         )
     }
