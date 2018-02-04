@@ -61,6 +61,7 @@ class Drinks extends Component{
                     <span>{e.name}</span>
                 </div>
             ))}
+            <p>{this.props.test.xxx}</p>
             </div>
         )
     }

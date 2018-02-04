@@ -33,10 +33,10 @@ class App extends Component {
     return (
       <div className="App">
       
-        <header className="App-header">
         {this.state.sleep?
         <TwoSec/>:''
         }
+        <header className="App-header">
           <TopBar appAll={this}/> 
         </header>
         <div className="contanier">

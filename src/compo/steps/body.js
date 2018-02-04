@@ -16,9 +16,10 @@ const addS ={
 
 
 }
+
 class FullB extends Component
 {
-
+    xxx ='123';
 
 
 constructor (props) {
@@ -41,16 +42,19 @@ constructor (props) {
     };
 
 }
+
     render(props)
     {
         
         return (
             <div className='mainElementsContainer'>
             {this.props.fullApp.state.currentStep==1?<Sizes sendToSizes={this}/>:this.props.fullApp.state.currentStep==2?<TypeOfPizza sendToType={this}/>:
-            this.props.fullApp.state.currentStep==3?<Extras sendToExtras={this}/>:this.props.fullApp.state.currentStep==4?<Drinks sendToDrink={this}/>:this.props.fullApp.state.currentStep==5?<Payment/>:''}
+            this.props.fullApp.state.currentStep==3?<Extras test={this} sendToExtras={this}/>:this.props.fullApp.state.currentStep==4?<Drinks test={this} sendToDrink={this}/>:this.props.fullApp.state.currentStep==5?<Payment/>:''}
             {console.log('position:'+this.props.fullApp.state.currentStep)}
             <NextButton fullAppNext={this.props.fullApp}/>
-            <img style={addS} src={ad}/>
+            <div className='topImage'>
+                
+            </div>
             </div>
         )
     }

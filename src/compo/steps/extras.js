@@ -13,6 +13,7 @@ class Extras extends Component
 
     componentWillMount(props)
     {
+        this.props.test.xxx=555
         const tempPizzaExtras=[
             ...this.state.extras
         ]
@@ -89,6 +90,9 @@ class Extras extends Component
                              <img src={e.src}/>
                         </div>))
                     }
+                    
+                    <p></p>
+                    <p>{this.props.test.xxx}</p>
             </div>
 
         )
