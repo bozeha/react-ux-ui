@@ -63,7 +63,7 @@ class TypeOfPizza extends Component
 
             //tempBodyState[{pizzaType: currentIndex} ];
             
-            debugger;
+            
          //   console.log('aaaaaaaaaaaa'+tempBodyState)   
 
            // this.props.sendToType.setState({saveData:tempPizzaType});

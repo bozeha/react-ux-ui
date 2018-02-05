@@ -18,7 +18,7 @@ class Sizes extends Component
             e.key== this.props.sendToSizes.state.saveData.sizes?e.class='selected':''
         )
         )
-        debugger;
+        
         this.setState({sizeElements:tempSizeElemnts});
 
     }

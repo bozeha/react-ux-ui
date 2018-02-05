@@ -37,12 +37,12 @@ class Drinks extends Component{
     {
       
         const drinkSelect =(CurrentIndex)=>{
-            debugger;
+            
 
             const tempDrinkList =[
                 ...this.state.drinkList
             ]   
-            debugger;
+            
             tempDrinkList.map(e=>(
                 
                 e.id == CurrentIndex?e.drinkClass='selected':e.drinkClass=''
@@ -62,6 +62,7 @@ class Drinks extends Component{
                 </div>
             ))}
             <p>{this.props.test.xxx}</p>
+            <p>{console.log(typeof this.props.test.xxx)}</p>
             </div>
         )
     }

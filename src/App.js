@@ -42,7 +42,7 @@ class App extends Component {
         <div className="contanier">
           <FullB fullApp={this}/>
         </div>
-        <Info/>
+        <Info fullApp={this} twoSec={this.sleepFunc}/>
       </div>
     );
   }

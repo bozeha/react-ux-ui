@@ -1,5 +1,5 @@
 import React , {Component} from 'react';
-
+import Fe from '../../assets/f.png'
 
 
 class Feffect extends Component
@@ -7,12 +7,12 @@ class Feffect extends Component
     render()
     {
         return(
-            <li onClick={()=>alert('')}>
+            <div className='f_effect'>
             F
             <div className='Fdiv'>
             </div>
-
-            </li>
+                <img src={Fe}/>
+            </div>
         )
     }
 

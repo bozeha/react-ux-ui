@@ -2,9 +2,52 @@
   position: fixed;
   top: 200px;
   left: 0px;
+  z-index: 10;
 }
 .MainInfo li {
   border: 2px solid black;
   margin-bottom: 3px;
   background-color: lightblue;
+}
+.f_effect img {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 50%;
+  opacity: 0.8;
+}
+.personInfo {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+}
+.personInfo span {
+  display: block;
+  background-color: white;
+  text-align: right;
+  padding: 5px;
+  font-weight: bold;
+}
+.personInfo .infoBlock {
+  width: 503px;
+  margin: 0 auto;
+}
+.max7 {
+  position: absolute;
+  top: 0px;
+  width: 200px;
+  left: 15%;
+  transform: translate(-50%);
+}
+.max7 img {
+  max-height: 300px;
+  padding-left: 500px;
+}
+.max7 p {
+  color: white;
+  font-size: 30px;
+  width: 500px;
+  background-color: black;
+  height: 50px;
+  border: 10px solid red;
 }
