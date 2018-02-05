@@ -1,0 +1,10 @@
+.MainInfo {
+  position: fixed;
+  top: 200px;
+  left: 0px;
+}
+.MainInfo li {
+  border: 2px solid black;
+  margin-bottom: 3px;
+  background-color: lightblue;
+}

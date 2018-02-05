@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './styles/App.css';
 import TopBar from './compo/top_bar';
 import TwoSec from './compo/2sec';
-import FullB from './compo/steps/body'
-
+import FullB from './compo/steps/body';
+import Info from './compo/info';
 class App extends Component {
   constructor (props) {
     super(props);
@@ -42,6 +42,7 @@ class App extends Component {
         <div className="contanier">
           <FullB fullApp={this}/>
         </div>
+        <Info/>
       </div>
     );
   }
